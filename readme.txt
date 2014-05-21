@@ -1,0 +1,1 @@
+this is a demo for ajaxFileUpload using ajaxUploadFile.js ,it is based on jquery.the directory 'download_deom' is download from web and other is my work.
