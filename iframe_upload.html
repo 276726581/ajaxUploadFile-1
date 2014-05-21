@@ -1,0 +1,10 @@
+<script src="jquery-1.4.4.min.js"></script>
+<script src="ajaxfileupload.js"></script>
+<!--隐藏的iframe,注意name值-->
+<iframe name="if"></iframe>
+
+<form method="post" action="action.php" enctype="multipart/form-data"  target="if">
+    <!--form表单，注意target值要与iframe值一致-->
+    <input type="file" name="img">
+    <input type="submit" value="submit">
+</form>
