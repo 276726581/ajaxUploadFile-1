@@ -1,0 +1,39 @@
+<script src="jquery-1.4.4.min.js"></script>
+<script src="ajaxfileupload.js"></script>
+<form method="post" action="action.php"  enctype="multipart/form-data" id="f">
+    <input type="text" name="username" >
+    <input type="text" name="password" >
+    <input type="file" name="img" id="img">
+    <input type="button" value="submit" onclick="post()">
+</form>
+<script type="text/javascript">
+    function post(){
+        $.ajaxFileUpload
+        (
+                {
+                    url:'action.php',
+                    secureuri:false,
+                    fileElementId:'img',
+                    dataType: 'json',
+//				data:{name:'logan', id:'id'},
+                    success: function (data, status)
+                    {
+                        if(typeof(data.error) != 'undefined')
+                        {
+                            if(data.error != '')
+                            {
+                                alert(data.error);
+                            }else
+                            {
+//                                alert(data.msg);
+                            }
+                        }
+                    },
+                    error: function (data, status, e)
+                    {
+                        alert(e);
+                    }
+                }
+        )
+    }
+</script>
